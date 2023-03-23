@@ -2,7 +2,7 @@
 [wiki]:        https://github.com/{{username}}/{{repo}}/wiki
 [contributors]:https://github.com/{{username}}/{{repo}}/graphs/contributors
 
-# Project Title [![Codacy Badge](https://app.codacy.com/project/badge/Grade/632811af84de4723b39049ce012374ac)](https://www.codacy.com/gh/srealmoreno/template-repo/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=srealmoreno/template-repo&amp;utm_campaign=Badge_Grade)
+# Project Title [![Codacy Badge](https://app.codacy.com/project/badge/Grade/e4242178273647029492143e5c435556)](https://app.codacy.com/gh/srealmoreno/prueba-react-ser/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
 One Paragraph of project description goes here
 
