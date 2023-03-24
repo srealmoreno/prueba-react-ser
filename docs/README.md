@@ -1,5 +1,4 @@
 [tags]:        https://github.com/srealmoreno/prueba-react-ser/tags
-[wiki]:        https://github.com/srealmoreno/prueba-react-ser/wiki
 [contributors]:https://github.com/srealmoreno/prueba-react-ser/graphs/contributors
 
 # Prueba React [![Codacy Badge](https://app.codacy.com/project/badge/Grade/e4242178273647029492143e5c435556)](https://app.codacy.com/gh/srealmoreno/prueba-react-ser/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
@@ -67,8 +66,8 @@ npm run dev
 
 ## 🖇️ Colaborando
 
-Por favor lee [CONTRIBUTING.md](CONTRIBUTING.md) para detalles de nuestro código de
-conducta, y el proceso para enviarnos pull requests.
+Por favor lee [CONTRIBUTING.md](CONTRIBUTING.md) para detalles de nuestro código
+de conducta, y el proceso para enviarnos pull requests.
 
 ## 📌 Veersionado
 
