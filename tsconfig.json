@@ -60,8 +60,8 @@
       ],
       "@fonts/*": [
         "src/assets/fonts/*"
-      ],
-    },
+      ]
+    }
   },
   "include": [
     "src",
