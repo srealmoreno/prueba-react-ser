@@ -1,0 +1,72 @@
+{
+  "name": "prueba-react-ser",
+  "version": "1.0.0",
+  "description": "Prueba técnica de React.",
+  "main": "src/main.tsx",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint src/**",
+    "lint:fix": "eslint src/** --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/srealmoreno/prueba-react-ser.git"
+  },
+  "author": "Salvador Real - Srealmoreno <srealmoreno@srealmorneo.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/srealmoreno/prueba-react-ser/issues/new/choose"
+  },
+  "homepage": "https://github.com/srealmoreno/prueba-react-ser",
+  "dependencies": {
+    "@mantine/core": "6.0.4",
+    "@mantine/ds": "6.0.4",
+    "@mantine/form": "6.0.4",
+    "@mantine/hooks": "6.0.4",
+    "@mantine/modals": "6.0.4",
+    "@mantine/notifications": "6.0.4",
+    "gh-pages": "5.0.0",
+    "nanoid": "4.0.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "wouter": "2.10.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "node": false,
+      "browser": false,
+      "es6": true
+    },
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    },
+    "extends": [
+      "./node_modules/ts-standard/eslintrc.json"
+    ],
+    "rules": {}
+  },
+  "prettier": {
+    "trailingComma": "none",
+    "singleQuote": true,
+    "printWidth": 120,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": false
+  },
+  "devDependencies": {
+    "@types/react": "18.0.28",
+    "@types/react-dom": "18.0.11",
+    "@types/wouter": "2.2.0",
+    "@vitejs/plugin-react": "3.1.0",
+    "ts-standard": "12.0.2",
+    "typescript": "5.0.2",
+    "vite": "4.2.1",
+    "vite-tsconfig-paths": "4.0.7"
+  }
+}
