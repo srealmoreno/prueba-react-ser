@@ -52,7 +52,7 @@ jobs:
 
       - name: 🛡️ Run ESLint
         run:
-          npm run lint --
+          npm install @microsoft/eslint-formatter-sarif && npm run lint --
           --format @microsoft/eslint-formatter-sarif
           --output-file eslint-results.sarif
 
