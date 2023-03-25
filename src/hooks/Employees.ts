@@ -1,9 +1,9 @@
 import { Employee } from '@typings/interfaces/employee'
 import { useEmployeeReturn } from '@typings/interfaces/useEmployees'
 import { validateEmail, validateInsuranceNumber, validateName, validatePersonalId } from '@utils/index'
+import { nanoid } from 'nanoid'
 import { useContext } from 'react'
 import { EmployeesContext } from 'src/context/Employees'
-import { useId } from '@mantine/hooks'
 
 function alReadyExist (employees: Employee[], employee: Employee, excludeId?: string): boolean {
   return employees.some((p) => {
@@ -49,7 +49,7 @@ export function useEmployees (): useEmployeeReturn {
       throw new Error('Error al registrar, ya existe un empleado con la misma cédula, email o numero de seguro')
     }
 
-    employee.id = useId()
+    employee.id = nanoid()
 
     setEmployees([...employees, employee])
   }

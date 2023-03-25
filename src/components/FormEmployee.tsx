@@ -3,7 +3,7 @@ import { useForm } from '@mantine/form'
 import { validateEmail, validateInsuranceNumber, validateName, validatePersonalId } from '@utils/index'
 import { IconMail, IconId, IconMedicalCross, IconUser } from '@tabler/icons-react'
 import { FormEmployeeProps } from '@typings/interfaces/formEmploye'
-import { IMaskInput } from 'react-imask'
+import InputMask from 'react-input-mask'
 
 export function FormEmployee ({
   submitText,
@@ -69,9 +69,12 @@ export function FormEmployee ({
             icon={<IconId stroke={1.5} size='1rem' />}
             mt='xs'
             label='Cédula'
+            placeholder='000-000000-0000Y'
             required
             {...form.getInputProps('personalId')}
-            mask='000-000000-0000a' component={IMaskInput}
+            component={InputMask}
+            mask='999-999999-9999a'
+            maskChar={null}
           />
 
           <InputBase
@@ -80,7 +83,10 @@ export function FormEmployee ({
             label='Número de seguro'
             required
             {...form.getInputProps('insuranceNumber')}
-            mask='0000000-0' component={IMaskInput}
+            mask='9999999-9'
+            placeholder='0000000-0'
+            component={InputMask}
+            maskChar={null}
           />
 
           <Group noWrap spacing={10} mt={3}>

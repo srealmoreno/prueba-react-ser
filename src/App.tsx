@@ -6,14 +6,14 @@ import { EmployeesProvider } from './context/Employees'
 import { Employee } from '@typings/interfaces/employee'
 import { useState } from 'react'
 import { EditEmployee } from '@components/pages/Edit'
-import { useId } from '@mantine/hooks'
 import { Api } from '@components/pages/Api'
+import { nanoid } from 'nanoid'
 
 export function App (): JSX.Element {
   const _employees: Employee[] =
     [
       {
-        id: useId(),
+        id: nanoid(),
         firstName: 'John',
         lastName: 'Doe',
         personalId: '123-123456-1234A',
@@ -21,7 +21,7 @@ export function App (): JSX.Element {
         email: 'jhon@example.com'
       },
       {
-        id: useId(),
+        id: nanoid(),
         firstName: 'Jane',
         lastName: 'Doe',
         personalId: '123-123456-1234B',
@@ -29,7 +29,7 @@ export function App (): JSX.Element {
         email: 'jane@exmaple.com'
       },
       {
-        id: useId(),
+        id: nanoid(),
         firstName: 'Bob',
         lastName: 'Doe',
         personalId: '123-123456-1234C',
