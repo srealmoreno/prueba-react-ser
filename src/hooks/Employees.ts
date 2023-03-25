@@ -1,11 +1,11 @@
-import { employee } from '@typings/interfaces/employee'
+import { Employee } from '@typings/interfaces/employee'
 import { useEmployeeReturn } from '@typings/interfaces/useEmployees'
 import { validateEmail, validateInsuranceNumber, validateName, validatePersonalId } from '@utils/index'
-import { nanoid } from 'nanoid'
 import { useContext } from 'react'
 import { EmployeesContext } from 'src/context/Employees'
+import { useId } from '@mantine/hooks'
 
-function alReadyExist (employees: employee[], employee: employee, excludeId?: string): boolean {
+function alReadyExist (employees: Employee[], employee: Employee, excludeId?: string): boolean {
   return employees.some((p) => {
     if (p.id === excludeId) {
       return false
@@ -15,7 +15,7 @@ function alReadyExist (employees: employee[], employee: employee, excludeId?: st
   })
 }
 
-function validateEmployee (employee: employee): boolean {
+function validateEmployee (employee: Employee): boolean {
   if (!validateName(employee.firstName)) {
     throw new Error('Nombre no válido')
   }
@@ -42,23 +42,23 @@ function validateEmployee (employee: employee): boolean {
 export function useEmployees (): useEmployeeReturn {
   const [employees, setEmployees] = useContext(EmployeesContext)
 
-  const addEmployee = (employee: employee): void => {
+  const addEmployee = (employee: Employee): void => {
     validateEmployee(employee)
 
     if (alReadyExist(employees, employee)) {
       throw new Error('Error al registrar, ya existe un empleado con la misma cédula, email o numero de seguro')
     }
 
-    employee.id = nanoid()
+    employee.id = useId()
 
     setEmployees([...employees, employee])
   }
 
-  const removeEmployee = (employee: employee): void => {
+  const removeEmployee = (employee: Employee): void => {
     setEmployees(employees.filter((p) => p.id !== employee.id))
   }
 
-  const updateEmployee = (employee: employee): void => {
+  const updateEmployee = (employee: Employee): void => {
     validateEmployee(employee)
 
     if (alReadyExist(employees, employee, employee.id)) {
@@ -68,7 +68,7 @@ export function useEmployees (): useEmployeeReturn {
     setEmployees(employees.map((p) => (p.id === employee.id ? employee : p)))
   }
 
-  const getEmployee = (id: string): employee | undefined => {
+  const getEmployee = (id: string): Employee | undefined => {
     return employees.find((p) => p.personalId === id || p.insuranceNumber === id || p.email === id || p.id === id)
   }
 
