@@ -14,6 +14,7 @@ export function FormEmployee ({
 }: FormEmployeeProps): JSX.Element {
   const form = useForm({
     initialValues: {
+      id: initialValues?.id ?? '',
       firstName: initialValues?.firstName ?? '',
       lastName: initialValues?.lastName ?? '',
       email: initialValues?.email ?? '',
