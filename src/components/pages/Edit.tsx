@@ -2,7 +2,6 @@ import { FormEmployee } from '@components/FormEmployee'
 import { TitlePage } from '@components/Title'
 import { useEmployees } from 'src/hooks/Employees'
 import { useLocation } from 'wouter'
-import { Employee } from '@typings/interfaces/employee'
 import { NotFoundPage } from '@components/pages/NotFound'
 import notify from '@utils/notifications'
 
@@ -22,7 +21,7 @@ export function EditEmployee (params: { employeeID: string | undefined }): JSX.E
     return <NotFoundPage />
   }
 
-  const submit = (employee: Employee): void => {
+  const submit = (): void => {
     try {
       updateEmployee(employee)
       notify.success('Empleado actualizado correctamente')
