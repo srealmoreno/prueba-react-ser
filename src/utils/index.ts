@@ -10,7 +10,7 @@ export function validateEmail (email: string): boolean {
 
 export function validatePersonalId (id: string): boolean {
   // 281-1201999-0003K
-  const re = /^[0-9]{3}-[0-9]{6}-[0-9]{4}[A-Za-z]{1}$/
+  const re = /^[0-9]{3}-[0-9]{6}-[0-9]{4}[A-Za-zñÑ]$/
   return re.test(id)
 }
 

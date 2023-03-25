@@ -1,7 +1,8 @@
+import { Employee } from './Employee'
 export interface useEmployeeReturn {
-  employees: Person[]
-  addEmployee: (person: Person) => void
-  removeEmployee: (person: Person) => void
-  updateEmployee: (person: Person) => void
-  getEmployee: (personalId: string) => Person | undefined
+  employees: Employee[]
+  addEmployee: (person: Employee) => void
+  removeEmployee: (person: Employee) => void
+  updateEmployee: (person: Employee) => void
+  getEmployee: (personalId: Employee) => Employee | undefined
 }

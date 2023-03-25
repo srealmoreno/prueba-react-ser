@@ -2,14 +2,14 @@ import { FormEmployee } from '@components/FormEmployee'
 import { TitlePage } from '@components/Title'
 import { useEmployees } from 'src/hooks/Employees'
 import { useLocation } from 'wouter'
-import { employee } from '@typings/interfaces/employee'
+import { Employee } from '@typings/interfaces/employee'
 import notify from '@utils/notifications'
 
 export function newEmployee (): JSX.Element {
   const [, setLocation] = useLocation()
   const { addEmployee } = useEmployees()
 
-  const submit = (employee: employee): void => {
+  const submit = (employee: Employee): void => {
     try {
       addEmployee(employee)
       setLocation('/')

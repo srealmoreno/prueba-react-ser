@@ -65,7 +65,7 @@
   },
   "include": [
     "src",
-    "vite.config.ts",
+    "vite.config.ts"
   ],
   "exclude": [
     "**/sq.ts"

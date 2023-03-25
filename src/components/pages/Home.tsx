@@ -1,13 +1,13 @@
-import { Employee } from '@components/CardEmployee'
+import { CardEmployee } from '@components/CardEmployee'
 import { TitlePage } from '@components/Title'
 import { Center, SimpleGrid } from '@mantine/core'
-import { employee } from '@typings/interfaces/employee'
+import { Employee } from '@typings/interfaces/employee'
 import { useEmployees } from 'src/hooks/Employees'
 
 export function HomePage (): JSX.Element {
   const { employees } = useEmployees()
 
-  const items = employees.map((p: employee) => <Employee key={p.personalId} employee={p} />)
+  const items = employees.map((p: Employee) => <CardEmployee key={p.personalId} employee={p} />)
   return (
     <>
       <TitlePage title='Inicio' subtitle='Empleados registrados' />
