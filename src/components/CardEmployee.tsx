@@ -1,5 +1,5 @@
 import { Avatar, Text, Paper, Button, Group } from '@mantine/core'
-import { employee } from '@typings/interfaces/employee'
+import { Employee } from '@typings/interfaces/employee'
 import { IconMail, IconId, IconMedicalCross, IconEdit, IconTrash, IconGift } from '@tabler/icons-react'
 import { CardEmployeeSection } from './CardEmployeeSection'
 import { useEmployees } from 'src/hooks/Employees'
@@ -8,7 +8,7 @@ import { useLocation } from 'wouter'
 import { modal } from '@utils/modals'
 import { notify } from '@utils/notifications'
 
-export function Employee (props: { employee: employee }): JSX.Element {
+export function CardEmployee (props: { employee: Employee }): JSX.Element {
   const { employee } = props
   const { removeEmployee } = useEmployees()
 

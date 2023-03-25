@@ -3,16 +3,17 @@ import { NotFoundPage } from '@components/pages/NotFound'
 import { Route, Switch } from 'wouter'
 import { newEmployee } from '@components/pages/New'
 import { EmployeesProvider } from './context/Employees'
-import { employee } from '@typings/interfaces/employee'
+import { Employee } from '@typings/interfaces/employee'
 import { useState } from 'react'
 import { EditEmployee } from '@components/pages/Edit'
-import { nanoid } from 'nanoid'
+import { useId } from '@mantine/hooks'
+import { Api } from '@components/pages/Api'
 
 export function App (): JSX.Element {
-  const _employees: employee[] =
+  const _employees: Employee[] =
     [
       {
-        id: nanoid(),
+        id: useId(),
         firstName: 'John',
         lastName: 'Doe',
         personalId: '123-123456-1234A',
@@ -20,7 +21,7 @@ export function App (): JSX.Element {
         email: 'jhon@example.com'
       },
       {
-        id: nanoid(),
+        id: useId(),
         firstName: 'Jane',
         lastName: 'Doe',
         personalId: '123-123456-1234B',
@@ -28,7 +29,7 @@ export function App (): JSX.Element {
         email: 'jane@exmaple.com'
       },
       {
-        id: nanoid(),
+        id: useId(),
         firstName: 'Bob',
         lastName: 'Doe',
         personalId: '123-123456-1234C',
@@ -38,7 +39,7 @@ export function App (): JSX.Element {
 
     ]
 
-  const [employees, setEmployees] = useState<employee[]>(_employees)
+  const [employees, setEmployees] = useState<Employee[]>(_employees)
 
   return (
     <EmployeesProvider value={[employees, setEmployees]}>
@@ -48,6 +49,7 @@ export function App (): JSX.Element {
         <Route path='/editar/:employeeID'>
           {params => <EditEmployee employeeID={params.employeeID} />}
         </Route>
+        <Route path='/api' component={Api} />
         <Route component={NotFoundPage} />
       </Switch>
     </EmployeesProvider>

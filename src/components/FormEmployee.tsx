@@ -1,8 +1,9 @@
-import { TextInput, Paper, Container, Button, Avatar, Center, Group } from '@mantine/core'
+import { TextInput, Paper, Container, Button, Avatar, Center, Group, InputBase } from '@mantine/core'
 import { useForm } from '@mantine/form'
 import { validateEmail, validateInsuranceNumber, validateName, validatePersonalId } from '@utils/index'
 import { IconMail, IconId, IconMedicalCross, IconUser } from '@tabler/icons-react'
 import { FormEmployeeProps } from '@typings/interfaces/formEmploye'
+import { IMaskInput } from 'react-imask'
 
 export function FormEmployee ({
   submitText,
@@ -13,7 +14,11 @@ export function FormEmployee ({
 }: FormEmployeeProps): JSX.Element {
   const form = useForm({
     initialValues: {
-      ...initialValues
+      firstName: initialValues?.firstName ?? '',
+      lastName: initialValues?.lastName ?? '',
+      email: initialValues?.email ?? '',
+      personalId: initialValues?.personalId ?? '',
+      insuranceNumber: initialValues?.insuranceNumber ?? ''
     },
     validate: {
       firstName: (value) => (validateName(value) ? null : 'Nombre inválido'),
@@ -58,25 +63,23 @@ export function FormEmployee ({
             required
             {...form.getInputProps('email')}
           />
-          <TextInput
+
+          <InputBase
             icon={<IconId stroke={1.5} size='1rem' />}
             mt='xs'
             label='Cédula'
-            placeholder='000-000000-0000Y'
             required
             {...form.getInputProps('personalId')}
-            onBlur={() => {
-              console.log(form.values.personalId)
-            }}
+            mask='000-000000-0000a' component={IMaskInput}
           />
 
-          <TextInput
+          <InputBase
             icon={<IconMedicalCross stroke={1.5} size='1rem' />}
             mt='xs'
             label='Número de seguro'
-            placeholder='0000000-0'
             required
             {...form.getInputProps('insuranceNumber')}
+            mask='0000000-0' component={IMaskInput}
           />
 
           <Group noWrap spacing={10} mt={3}>

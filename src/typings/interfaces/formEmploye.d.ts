@@ -1,3 +1,4 @@
+import { Employee } from './employee'
 export interface FormEmployeeProps {
   initialValues?: Employee
   onSubmit: (values: Employee) => void
