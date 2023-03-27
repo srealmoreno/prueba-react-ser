@@ -1,0 +1,73 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "outDir": "./build",
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "strictNullChecks": true,
+    "composite": true,
+    "useDefineForClassFields": true,
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "baseUrl": "./",
+    "paths": {
+      "@lib/*": [
+        "src/lib/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@resources/*": [
+        "src/resources/*"
+      ],
+      "@typings/*": [
+        "src/typings/*"
+      ],
+      "@interfaces/*": [
+        "src/typings/interfaces/*"
+      ],
+      "@services/*": [
+        "src/services/*"
+      ],
+      "@schemas/*": [
+        "src/schemas/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@pages/*": [
+        "src/components/pages/*"
+      ],
+      "@styles/*": [
+        "src/assets/styles/*"
+      ],
+      "@fonts/*": [
+        "src/assets/fonts/*"
+      ]
+    }
+  },
+  "include": [
+    "src",
+    "vite.config.ts"
+  ],
+  "exclude": [
+    "**/sq.ts"
+  ]
+}

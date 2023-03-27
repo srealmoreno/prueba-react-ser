@@ -1,102 +1,92 @@
-[tags]:        https://github.com/{{username}}/{{repo}}/tags
-[wiki]:        https://github.com/{{username}}/{{repo}}/wiki
-[contributors]:https://github.com/{{username}}/{{repo}}/graphs/contributors
+[tags]:        https://github.com/srealmoreno/prueba-react-ser/tags
+[contributors]:https://github.com/srealmoreno/prueba-react-ser/graphs/contributors
 
-# Project Title [![Codacy Badge](https://app.codacy.com/project/badge/Grade/e4242178273647029492143e5c435556)](https://app.codacy.com/gh/srealmoreno/prueba-react-ser/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+# Prueba React [![Codacy Badge](https://app.codacy.com/project/badge/Grade/e4242178273647029492143e5c435556)](https://app.codacy.com/gh/srealmoreno/prueba-react-ser/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
-One Paragraph of project description goes here
+Pequeña prueba de React para la empresa SER
 
-## 🚀 Getting Started
+## 🚀 Empezando
 
-These instructions will get you a copy of the project up and running on your local
-machine for development and testing purposes. See deployment for notes on how to
-deploy the project on a live system.
+Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento
+en tu máquina local para propósitos de desarrollo y pruebas. Consulta
+**Despliegue** para conocer como desplegar el proyecto.
 
-### 📋 Prerequisites
+### 📋 Pre-requisitos
 
-What things you need to install the software and how to install them
+Para poder ejecutar el proyecto necesitas tener instalado:
 
-```plain
-Give examples
+- [Node.js](https://nodejs.org/es/download/)
+- [Git](https://git-scm.com/downloads)
+
+### 🔧 Instalando
+
+Clona el repositorio
+
+```bash
+git clone https https://github.com/srealmoreno/prueba-react-ser
+cd prueba-react-ser
 ```
 
-### 🔧 Installing
+Instala las dependencias
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```plain
-Give the example
+```bash
+npm install
 ```
 
-And repeat
+## ⚙️ Ejecutando las pruebas
 
-```plain
-until finished
+Por el momento no hay tests, unicamente test de estilo
+
+```bash
+npm run lint
 ```
 
-End with an example of getting some data out of the system or using it for a little
-demo
+## 📦 Despliegue
 
-## ⚙️ Running the tests
+Para desplegar el proyecto en un servidor local
 
-Explain how to run the automated tests for this system
-
-### 🔩 Break down into end to end tests
-
-Explain what these tests test and why
-
-```pain
-Give an example
+```bash
+npm run dev
 ```
 
-### ⌨️ And coding style tests
+## 🛠️ Construido con
 
-Explain what these tests test and why
+- [React](https://reactjs.org) - Librería de JavaScript para construir interfaces
+  de usuario
+- [TypeScript](https://www.typescriptlang.org) - Superset de JavaScript que añade
+  tipado estático
+- [Mantine](https://mantine.dev) - Componentes de React para construir interfaces
+  de usuario de forma rápida y sencilla
+- [wouter](https://github.com/molefrog/wouter#readme) - Librería de React para crear
+  aplicaciones web con navegación
+- [Vite](https://vitejs.dev) - Herramienta de construcción de aplicaciones web
+  modernas
+- [Github Pages](https://pages.github.com) - Servicio de alojamiento de páginas
+  web estáticas
 
-```pain
-Give an example
-```
+## 🖇️ Colaborando
 
-## 📦 Deployment
+Por favor lee [CONTRIBUTING.md](CONTRIBUTING.md) para detalles de nuestro código
+de conducta, y el proceso para enviarnos pull requests.
 
-Add additional notes about how to deploy this on a live system
+## 📌 Veersionado
 
-## 🛠️ Built With
+Usamos [SemVer](http://semver.org/) para el versionado. Para las versiones
+disponibles, mira los [tags en este repositorio][tags].
 
-* [Node.js](https://nodejs.org) - The server side of the application
-* [Express](https://expressjs.com) - The web framework
-* [React](https://reactjs.org) - The client side of the application
-* [Maven](https://maven.apache.org/) - Dependency Management
+## ✒️ Autores
 
-## 🖇️ Contributing
+- **Srealmoreno** - *Initial work* - [srealmoreno](https://github.com/srealmoreno)
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md)for details on our code of conduct,
-and the process for submitting pull requests to us.
+Ver también la lista de todos los [contribuyentes][contributors] que han participado
+en este proyecto.
 
-## 📖 Wiki
+## 📄 Licencia
 
-You can find more information about this project on the [wiki][wiki].
+Este proyecto está bajo la Licencia MIT - mira el archivo [LICENSE.md](../LICENSE.md)
+para detalles
 
-## 📌 Versioning
+## 🎁 Reconocimientos
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available,
-see the [tags on this repository][tags].
-
-## ✒️ Authors
-
-* **Srealmoreno** - *Initial work* - [srealmoreno](https://github.com/srealmoreno)
-
-See also the list of [contributors][contributors] who participated in this project.
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE.md](../LICENSE.md)
-file for details
-
-## 🎁 Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+- Agradecimientos a [Marlon Ocampos](https://github.com/marlonocampos) por su
+  recomendación
