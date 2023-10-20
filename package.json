@@ -63,7 +63,7 @@
     "semi": false
   },
   "devDependencies": {
-    "@types/react": "18.0.28",
+    "@types/react": "18.2.30",
     "@types/react-dom": "18.0.11",
     "@types/react-input-mask": "3.0.2",
     "@types/wouter": "2.2.0",
